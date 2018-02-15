@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramacaoDeComputadores1", "ProgramacaoDeComputadores1\ProgramacaoDeComputadores1.csproj", "{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelogioXaml", "RelogioXaml\RelogioXaml.csproj", "{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

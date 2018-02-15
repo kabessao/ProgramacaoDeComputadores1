@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgramacaoDeComputadores1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Width="200" SizeToContent="Height">
+    
+    <StackPanel Margin="5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                
+            </Grid.ColumnDefinitions>
+
+            <StackPanel>
+                <TextBlock Text="Nome:"/>
+                <TextBlock Text="Fone:"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBox x:Name="txtNome"/>
+                <TextBox x:Name="txtFone"/>
+            </StackPanel>
+
+
+        </Grid>
+        <Button Content="Ok" Margin="0 5" x:Name="btnOk"/>
+
+        <TextBlock x:Name="txbNome"/>
+        <TextBlock x:Name="txbFone"/>
+        <Button Content="Sair" x:Name="btnSair"/>
+
+    </StackPanel>
 </Window>

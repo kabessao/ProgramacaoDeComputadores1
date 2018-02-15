@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
-namespace ProgramacaoDeComputadores1
+namespace RelogioXaml
 {
     /// <summary>
     /// Interação lógica para MainWindow.xam
@@ -22,15 +23,18 @@ namespace ProgramacaoDeComputadores1
     {
         public MainWindow()
         {
+            Tick();
             InitializeComponent();
-            btnSair.Click += (s, e) => this.Close();
-            btnOk.Click += (s, e) => { Limpar(); txbNome.Text = txtNome.Text; txbFone.Text = txtFone.Text; };
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = new TimeSpan(0, 0,1);
+            timer.Tick += (s, e) => Tick();
+            timer.Start();
+           
         }
 
-        private void Limpar()
+        private void Tick()
         {
-            txtFone.Clear();
-            txtNome.Clear();
+            txtTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
