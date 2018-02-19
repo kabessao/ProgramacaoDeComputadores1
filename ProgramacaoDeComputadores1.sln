@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramacaoDeComputadores1"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelogioXaml", "RelogioXaml\RelogioXaml.csproj", "{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lanches", "lanches\lanches.csproj", "{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
