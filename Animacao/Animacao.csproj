@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Animacao</RootNamespace>
+    <AssemblyName>Animacao</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gif\animacao.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagem\frame_000_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_001_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_002_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_003_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_004_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_005_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_006_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_007_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_008_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_009_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_010_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_011_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_012_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_013_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_014_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_015_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_016_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_017_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_018_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_019_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_020_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_021_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_022_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_023_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_024_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_025_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_026_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_027_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_028_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_029_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_030_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_031_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_032_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_033_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_034_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_035_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_036_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_037_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_038_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_039_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_040_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_041_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_042_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_043_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_044_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_045_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_046_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_047_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_048_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_049_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_050_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_051_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_052_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_053_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_054_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_055_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_056_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_057_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_058_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_059_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_060_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_061_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_062_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_063_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_064_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_065_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_066_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_067_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_068_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_069_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_070_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_071_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_072_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_073_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_074_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_075_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_076_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_077_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_078_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_079_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_080_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_081_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_082_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_083_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_084_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_085_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_086_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_087_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_088_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_089_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_090_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_091_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_092_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_093_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_094_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_095_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_096_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_097_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_098_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_099_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_100_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_101_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_102_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_103_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_104_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_105_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_106_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_107_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_108_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_109_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_110_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_111_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_112_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_113_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_114_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_115_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_116_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_117_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_118_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_119_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_120_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_121_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_122_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_123_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_124_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_125_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_126_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_127_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_128_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_129_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_130_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_131_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_132_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_133_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_134_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_135_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_136_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_137_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_138_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_139_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_140_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_141_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_142_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_143_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_144_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_145_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_146_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_147_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_148_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_149_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_150_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_151_delay-0.03s.gif" />
+    <Resource Include="imagem\frame_152_delay-0.03s.gif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

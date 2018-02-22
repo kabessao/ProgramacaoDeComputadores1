@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgramacaoDeComputadores1", "ProgramacaoDeComputadores1\ProgramacaoDeComputadores1.csproj", "{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exemplo1", "ProgramacaoDeComputadores1\Exemplo1.csproj", "{FEAC1521-B7E0-45DD-86FE-56C88CE05D6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelogioXaml", "RelogioXaml\RelogioXaml.csproj", "{A3D8C04A-6BF3-4B3E-8D0F-572C94EF6C5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lanches", "lanches\lanches.csproj", "{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animacao", "Animacao\Animacao.csproj", "{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploListBox", "ExemploListBox\ExemploListBox.csproj", "{A44C343C-129E-4699-A17E-AFD7DCC0CD59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98C5B92B-67A1-4CE1-8E2A-6FDC1A901FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B22076C-CDA2-44A0-A663-CFEF4CC381C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A44C343C-129E-4699-A17E-AFD7DCC0CD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A44C343C-129E-4699-A17E-AFD7DCC0CD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A44C343C-129E-4699-A17E-AFD7DCC0CD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A44C343C-129E-4699-A17E-AFD7DCC0CD59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
