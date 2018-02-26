@@ -27,6 +27,7 @@ namespace Animacao
 
         private string _ibagem;
 
+        int num = 0;
 
         public string Ibagem {
             get
@@ -46,18 +47,19 @@ namespace Animacao
            
             InitializeComponent();
             DispatcherTimer timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 0, 100);
-            timer.Tick += Tick;
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 25);
+            timer.Tick += (s, e) => Tick();
             timer.Start();
-            Ibagem = "001";
-            imgImage.Source = new BitmapImage(new Uri(Ibagem));
-            MessageBox.Show($"{1:000}");
             
         }
 
-        private void Tick(object sender, EventArgs e)
+        private void Tick()
         {
-
+           
+                if (num > 152) num = 0;
+                Ibagem = $"{num:000}";
+                imgImage.Source = new BitmapImage(new Uri(Ibagem));
+                num++;
         }
     }
 }
