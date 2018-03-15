@@ -1,0 +1,42 @@
+﻿<Window x:Class="CassinoXaml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CassinoXaml"
+        mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
+        Title="MainWindow" Height="240" Width="325">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" >
+            <TextBlock Text="Apostas"
+                       HorizontalAlignment="Center"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="TextAlignment" Value="Center"/>
+                        <Setter Property="Foreground" Value="Red"/>
+                        <Setter Property="FontSize" Value="40"/>
+                    </Style>
+                </Grid.Resources>
+                <TextBlock Text="0"
+                         Grid.Column="0"
+                         x:Name="txbNum1"/>
+                <TextBlock Text="0"
+                         Grid.Column="1"
+                         x:Name="txbNum2"/>
+                <TextBlock Text="0"
+                         Grid.Column="2"
+                         x:Name="txbNum3"/>
+            </Grid>
+            <Button Content="apostar"
+                    Click="Apostar"/>
+
+        </StackPanel> 
+    </Grid>
+</Window>
