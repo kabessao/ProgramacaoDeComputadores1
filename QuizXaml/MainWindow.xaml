@@ -5,32 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuizXaml"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="250" Width="425">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <StackPanel VerticalAlignment="Center">
-            <TextBlock Text="Pergunta"
+        <StackPanel VerticalAlignment="Center"
+                    x:Name="Painel">
+            <TextBlock Text="[Perguntas]"
                        x:Name="txbPergunta"
                        HorizontalAlignment="Center"/>
-            <Grid>
+            <Grid Margin="0 5" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnVerdadeiro"
-                        Content="Verdadeiro"
+                <Button Content="Verdadeiro"
                         Grid.Column="0"
+                        Click="Resposta"
+                        x:Name="btnVerdadeiro"
                         IsEnabled="false"/>
-                <Button x:Name="btnFalso"
-                        Content="Falso"
+                <Button Content="Falso"
+                        Click="Resposta"
+                        x:Name="btnFalso"
                         Grid.Column="1"
                         IsEnabled="false"/>
             </Grid>
-
-
         </StackPanel>
         <StackPanel VerticalAlignment="Center"
                     Grid.Column="1"
