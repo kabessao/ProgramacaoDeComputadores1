@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using System.Timers;
 
 namespace Testes
 {
@@ -12,10 +13,10 @@ namespace Testes
         
         static void Main(string[] args)
         {
-            for (int i = 0; i < 100; i++)
-            {
-                Console.WriteLine($"{}");
-            }
+            Timer timer = new Timer();
+            timer.Interval = 1;
+            timer.Elapsed += (s, e) => Console.WriteLine(System.Environment.TickCount);
+            timer.Start();
         }
     }
 }

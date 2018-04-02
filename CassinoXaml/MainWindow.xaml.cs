@@ -38,17 +38,17 @@ namespace CassinoXaml
             if (i < 20)
             {
                 i++;
-                txbNum1.Text = $"{new Random().Next(0, 7)}";
+                txbNum1.Text = $"{new Random(System.Environment.TickCount).Next(0, 7)}";
             }
-            if (j < new Random().Next(50,new Random().Next(51,59)))
+            if (j < 50)
             {
                 j++;
-                txbNum2.Text= $"{new Random().Next(0, 7)}";
+                txbNum2.Text= $"{new Random(System.Environment.TickCount).Next(0, 7)}";
             }
-            if (k < new Random().Next(100,new Random().Next(101,109)))
+            if (k < 100)
             {
                 k++;
-                txbNum3.Text = $"{new Random().Next(0, 7)}";
+                txbNum3.Text = $"{new Random(System.Environment.TickCount).Next(0, 7)}";
             }
             if (k == 100) timer.Stop();
         }
