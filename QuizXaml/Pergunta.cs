@@ -12,17 +12,17 @@ namespace QuizXaml
             {
                 new Pergunta()
                 {
-                    Texto = "O nome do criador do kernel Linux é\nLunus Trovalds!",
+                    Texto = "O nome do criador do kernel Linux é\nLainas Trovalds!",
                     Resposta = false
                 },
                 new Pergunta()
                 {
                     Texto = "Existem varios tipos de G.P.L!",
-                    Resposta = false
+                    Resposta = true
                 },
                 new Pergunta()
                 {
-                    Texto = "O sistema Operacional Windows atualmente\ndomina o mercado" ,
+                    Texto = "O sistema Operacional Windows atualmente\ndomina o mercado para desktop" ,
                     Resposta = true
                 },
                 new Pergunta(){
