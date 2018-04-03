@@ -85,12 +85,15 @@ namespace QuizXaml
         {
             string mensagem = "";
             string ace = "nada, que bosta em!";
-            if (Acertos != 0) ace = $"{Acertos} perguntas";
+            if (Acertos != 0)
+                ace = $"{Acertos} perguntas";
+            if (Acertos == Perguntas.Count)
+                ace = "todas as perguntas, mizeravi!";
             if (Acertos > (Perguntas.Count / 2))
                 mensagem = "Parabens";
             else
                 mensagem = "Que decepção";
-            MessageBox.Show(mensagem + ", você acertou " + ace);
+            MessageBox.Show(mensagem + ", você acertou " + ace,"Resultado");
         }
 
         private void Resposta(object sender, RoutedEventArgs e)

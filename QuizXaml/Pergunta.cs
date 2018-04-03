@@ -33,8 +33,22 @@ namespace QuizXaml
                 {
                     Texto = "Hardware são aplicativos e\nSoftware é a parte fisica",
                     Resposta = false
+                },
+                new Pergunta()
+                {
+                    Texto = "Linux foi baseado em UNIX",
+                    Resposta = true
+                },
+                new Pergunta()
+                {
+                    Texto ="Este programa foi feito em Visual Basic",
+                    Resposta = false
+                },
+                new Pergunta()
+                {
+                    Texto = "Este programa foi feito\nem uma maquina virtual",
+                    Resposta = true
                 }
-
             };
         }
     } 
