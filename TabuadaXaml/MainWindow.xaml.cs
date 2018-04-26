@@ -23,11 +23,13 @@ namespace TabuadaXaml
         public MainWindow()
         {
             InitializeComponent();
+            txtNumero.Focus();
         }
 
-        private void Caucular(object sender, RoutedEventArgs e)
+        private void Calcular(object sender, RoutedEventArgs e)
         {
             Painel.Children.Clear();
+            if (txtNumero.Text == "") return;
             if (double.TryParse(txtNumero.Text, out double Numero))
                 for (int i = 1; i != 11; i++)
                 {
@@ -35,6 +37,14 @@ namespace TabuadaXaml
                 }
             else
                 Painel.Children.Add(new TextBlock { Text = "Digita um numero sua mula quadrada!" });
+        }
+
+        private void KeyDownWindow(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Calcular(null, null);                
+            }
         }
     }
 }

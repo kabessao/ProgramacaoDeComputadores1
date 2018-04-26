@@ -1,0 +1,28 @@
+﻿<Window x:Class="TesteXaml.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TesteXaml"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Teste Random"/>
+            <TextBlock Text="Numero" x:Name="txbPrimeiro"/>
+            <TextBlock Text="[numero aqui]" x:Name="txbnumero"/>
+            <Button Content="Começar" Click="Start"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="0"
+                       x:Name="txbErros"/>
+
+        </StackPanel>
+    </Grid>
+</Window>

@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizXaml", "QuizXaml\QuizXa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabuadaXaml", "TabuadaXaml\TabuadaXaml.csproj", "{284ADB9F-DFA2-405A-8E29-306082D898D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteXaml", "TesteXaml\TesteXaml.csproj", "{4BB720EA-B155-4519-BE5E-8E3765702810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroLivrosXaml", "CadastroLivrosXaml\CadastroLivrosXaml.csproj", "{8DB28E43-1F51-44E6-9E23-D09D1C3F65CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{284ADB9F-DFA2-405A-8E29-306082D898D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{284ADB9F-DFA2-405A-8E29-306082D898D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{284ADB9F-DFA2-405A-8E29-306082D898D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB720EA-B155-4519-BE5E-8E3765702810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB720EA-B155-4519-BE5E-8E3765702810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB720EA-B155-4519-BE5E-8E3765702810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB720EA-B155-4519-BE5E-8E3765702810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB28E43-1F51-44E6-9E23-D09D1C3F65CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB28E43-1F51-44E6-9E23-D09D1C3F65CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB28E43-1F51-44E6-9E23-D09D1C3F65CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB28E43-1F51-44E6-9E23-D09D1C3F65CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

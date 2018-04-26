@@ -99,15 +99,16 @@ namespace QuizXaml
         private void Resposta(object sender, RoutedEventArgs e)
         {
             bool resposta = ((sender as Button).Content.ToString() == "Verdadeiro");
+
             if (Numero != Perguntas.Count)
-            if (resposta == Perguntas[Numero].Resposta)
-            {
-                Acertos++; 
-            }            
-            else
-            {
-                Erros++;
-            }
+                if (resposta == Perguntas[Numero].Resposta)
+                {
+                    Acertos++;
+                }
+                else
+                {
+                    Erros++;
+                }
             Numero++;
             ProximaPergunta();
         }

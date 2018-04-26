@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TabuadaXaml"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" SizeToContent="WidthAndHeight">
-    <Grid>
+        KeyDown="KeyDownWindow"
+        Title="Tabuada" SizeToContent="WidthAndHeight">
+    <Grid Margin="5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <StackPanel x:Name="Painel"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    HorizontalAlignment="Center"/>
 
         <StackPanel>
             <TextBlock Text="Numero:"/>
             <TextBox x:Name="txtNumero"/>
-            <Button Content="Caucular"
-                    Click="Caucular"/>
+            <Button Content="Calcular"
+                    Click="Calcular"/>
         </StackPanel>
     </Grid>
 </Window>

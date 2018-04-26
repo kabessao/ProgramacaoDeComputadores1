@@ -26,7 +26,9 @@ namespace ProgramacaoDeComputadores1
             btnSair.Click += (s, e) => this.Close();
             btnOk.Click += (s, e) => { Limpar(); txbNome.Text = txtNome.Text; txbFone.Text = txtFone.Text; };
         }
-
+        /// <summary>
+        /// Limpa a bagaça toda
+        /// </summary>
         private void Limpar()
         {
             txtFone.Clear();
