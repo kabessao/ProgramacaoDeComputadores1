@@ -42,5 +42,15 @@ namespace CadastroLivrosXaml.Properties {
                 return ((string)(this["bancoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\dados.mdb")]
+        public string dadosConnectionString1 {
+            get {
+                return ((string)(this["dadosConnectionString1"]));
+            }
+        }
     }
 }

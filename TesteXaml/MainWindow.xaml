@@ -7,22 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="200" Width="200">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center">
             <TextBlock Text="Teste Random"/>
-            <TextBlock Text="Numero" x:Name="txbPrimeiro"/>
-            <TextBlock Text="[numero aqui]" x:Name="txbnumero"/>
+            <TextBlock Text="Primeiro" x:Name="txbPrimeiro"/>
+            <TextBlock Text="Segundo" x:Name="txbSegundo"/>
+            <TextBlock Text="Uptime" x:Name="txbUpTime"/>
             <Button Content="Começar" Click="Start"/>
-        </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
-            <TextBlock Text="0"
-                       x:Name="txbErros"/>
-
         </StackPanel>
     </Grid>
 </Window>

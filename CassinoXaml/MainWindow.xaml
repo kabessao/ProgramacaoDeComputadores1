@@ -16,6 +16,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
                     <Style TargetType="TextBlock">
@@ -33,6 +34,9 @@
                 <TextBlock Text="0"
                          Grid.Column="2"
                          x:Name="txbNum3"/>
+                <TextBlock Text="0"
+                         Grid.Column="3"
+                         x:Name="txbNum4"/>
             </Grid>
             <Button Content="apostar"
                     Click="Apostar"/>

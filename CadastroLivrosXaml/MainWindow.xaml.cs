@@ -26,26 +26,26 @@ namespace CadastroLivrosXaml
             InitializeComponent();
         }
 
-        livroTableAdapter banco = new livroTableAdapter();
+        livrosTableAdapter banco = new livrosTableAdapter();
 
         private void Listar(object sender, RoutedEventArgs e)
         {
-            Painel.Children.Clear();
-            List<StackPanel> list = new List<StackPanel>();
             foreach (var item in banco.GetData().ToList())
             {
-                StackPanel stack = new StackPanel()
-                {
-                    Orientation = Orientation.Horizontal
-                };
-                stack.Children.Add(new TextBlock() { Text = $"Id: {item.cod_livro}" });
-                stack.Children.Add(new TextBlock() { Text = " Autor: "+item.autor });
-                stack.Children.Add(new TextBlock() { Text = " Nome: "+item.nome });
-                Painel.Children.Add(stack);
+                lstLista.Items.Add(new Livro { Id = item.id_livro, Autor = item.autor, Nome = item.nome });
             }
         }
 
-        private void Gravar(object sender, RoutedEventArgs e) => banco.Insert(txtAutor.Text, txtNomeLivro.Text);
+        private void Gravar(object sender, RoutedEventArgs e)
+        {
+            banco.Insert(txtAutor.Text, txtNomeLivro.Text);
+        }
 
+        private void lstLista_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            Livro livro = ((sender as ListView).SelectedItem as Livro);
+            txtAutor.Text = livro.Autor;
+            txtNomeLivro.Text = livro.Nome;
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace CadastroLivrosXaml {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class dados : global::System.Data.DataSet {
         
-        private livroDataTable tablelivro;
+        private livrosDataTable tablelivros;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace CadastroLivrosXaml {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["livro"] != null)) {
-                    base.Tables.Add(new livroDataTable(ds.Tables["livro"]));
+                if ((ds.Tables["livros"] != null)) {
+                    base.Tables.Add(new livrosDataTable(ds.Tables["livros"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace CadastroLivrosXaml {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public livroDataTable livro {
+        public livrosDataTable livros {
             get {
-                return this.tablelivro;
+                return this.tablelivros;
             }
         }
         
@@ -152,8 +152,8 @@ namespace CadastroLivrosXaml {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["livro"] != null)) {
-                    base.Tables.Add(new livroDataTable(ds.Tables["livro"]));
+                if ((ds.Tables["livros"] != null)) {
+                    base.Tables.Add(new livrosDataTable(ds.Tables["livros"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace CadastroLivrosXaml {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablelivro = ((livroDataTable)(base.Tables["livro"]));
+            this.tablelivros = ((livrosDataTable)(base.Tables["livros"]));
             if ((initTable == true)) {
-                if ((this.tablelivro != null)) {
-                    this.tablelivro.InitVars();
+                if ((this.tablelivros != null)) {
+                    this.tablelivros.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace CadastroLivrosXaml {
             this.Namespace = "http://tempuri.org/dados.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablelivro = new livroDataTable();
-            base.Tables.Add(this.tablelivro);
+            this.tablelivros = new livrosDataTable();
+            base.Tables.Add(this.tablelivros);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializelivro() {
+        private bool ShouldSerializelivros() {
             return false;
         }
         
@@ -270,25 +270,25 @@ namespace CadastroLivrosXaml {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void livroRowChangeEventHandler(object sender, livroRowChangeEvent e);
+        public delegate void livrosRowChangeEventHandler(object sender, livrosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class livroDataTable : global::System.Data.TypedTableBase<livroRow> {
+        public partial class livrosDataTable : global::System.Data.TypedTableBase<livrosRow> {
             
-            private global::System.Data.DataColumn columncod_livro;
-            
-            private global::System.Data.DataColumn columnautor;
+            private global::System.Data.DataColumn columnid_livro;
             
             private global::System.Data.DataColumn columnnome;
             
+            private global::System.Data.DataColumn columnautor;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroDataTable() {
-                this.TableName = "livro";
+            public livrosDataTable() {
+                this.TableName = "livros";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +296,7 @@ namespace CadastroLivrosXaml {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal livroDataTable(global::System.Data.DataTable table) {
+            internal livrosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,24 +313,16 @@ namespace CadastroLivrosXaml {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected livroDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected livrosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn cod_livroColumn {
+            public global::System.Data.DataColumn id_livroColumn {
                 get {
-                    return this.columncod_livro;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn autorColumn {
-                get {
-                    return this.columnautor;
+                    return this.columnid_livro;
                 }
             }
             
@@ -339,6 +331,14 @@ namespace CadastroLivrosXaml {
             public global::System.Data.DataColumn nomeColumn {
                 get {
                     return this.columnnome;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn autorColumn {
+                get {
+                    return this.columnautor;
                 }
             }
             
@@ -353,54 +353,54 @@ namespace CadastroLivrosXaml {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRow this[int index] {
+            public livrosRow this[int index] {
                 get {
-                    return ((livroRow)(this.Rows[index]));
+                    return ((livrosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event livroRowChangeEventHandler livroRowChanging;
+            public event livrosRowChangeEventHandler livrosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event livroRowChangeEventHandler livroRowChanged;
+            public event livrosRowChangeEventHandler livrosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event livroRowChangeEventHandler livroRowDeleting;
+            public event livrosRowChangeEventHandler livrosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event livroRowChangeEventHandler livroRowDeleted;
+            public event livrosRowChangeEventHandler livrosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddlivroRow(livroRow row) {
+            public void AddlivrosRow(livrosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRow AddlivroRow(string autor, string nome) {
-                livroRow rowlivroRow = ((livroRow)(this.NewRow()));
+            public livrosRow AddlivrosRow(string nome, string autor) {
+                livrosRow rowlivrosRow = ((livrosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        autor,
-                        nome};
-                rowlivroRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowlivroRow);
-                return rowlivroRow;
+                        nome,
+                        autor};
+                rowlivrosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowlivrosRow);
+                return rowlivrosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRow FindBycod_livro(int cod_livro) {
-                return ((livroRow)(this.Rows.Find(new object[] {
-                            cod_livro})));
+            public livrosRow FindByid_livro(int id_livro) {
+                return ((livrosRow)(this.Rows.Find(new object[] {
+                            id_livro})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                livroDataTable cln = ((livroDataTable)(base.Clone()));
+                livrosDataTable cln = ((livrosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,61 +408,61 @@ namespace CadastroLivrosXaml {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new livroDataTable();
+                return new livrosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columncod_livro = base.Columns["cod_livro"];
-                this.columnautor = base.Columns["autor"];
+                this.columnid_livro = base.Columns["id_livro"];
                 this.columnnome = base.Columns["nome"];
+                this.columnautor = base.Columns["autor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columncod_livro = new global::System.Data.DataColumn("cod_livro", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncod_livro);
-                this.columnautor = new global::System.Data.DataColumn("autor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnautor);
+                this.columnid_livro = new global::System.Data.DataColumn("id_livro", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_livro);
                 this.columnnome = new global::System.Data.DataColumn("nome", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnome);
+                this.columnautor = new global::System.Data.DataColumn("autor", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnautor);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columncod_livro}, true));
-                this.columncod_livro.AutoIncrement = true;
-                this.columncod_livro.AutoIncrementSeed = -1;
-                this.columncod_livro.AutoIncrementStep = -1;
-                this.columncod_livro.AllowDBNull = false;
-                this.columncod_livro.Unique = true;
-                this.columnautor.MaxLength = 255;
+                                this.columnid_livro}, true));
+                this.columnid_livro.AutoIncrement = true;
+                this.columnid_livro.AutoIncrementSeed = -1;
+                this.columnid_livro.AutoIncrementStep = -1;
+                this.columnid_livro.AllowDBNull = false;
+                this.columnid_livro.Unique = true;
                 this.columnnome.MaxLength = 255;
+                this.columnautor.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRow NewlivroRow() {
-                return ((livroRow)(this.NewRow()));
+            public livrosRow NewlivrosRow() {
+                return ((livrosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new livroRow(builder);
+                return new livrosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(livroRow);
+                return typeof(livrosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.livroRowChanged != null)) {
-                    this.livroRowChanged(this, new livroRowChangeEvent(((livroRow)(e.Row)), e.Action));
+                if ((this.livrosRowChanged != null)) {
+                    this.livrosRowChanged(this, new livrosRowChangeEvent(((livrosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -470,8 +470,8 @@ namespace CadastroLivrosXaml {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.livroRowChanging != null)) {
-                    this.livroRowChanging(this, new livroRowChangeEvent(((livroRow)(e.Row)), e.Action));
+                if ((this.livrosRowChanging != null)) {
+                    this.livrosRowChanging(this, new livrosRowChangeEvent(((livrosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -479,8 +479,8 @@ namespace CadastroLivrosXaml {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.livroRowDeleted != null)) {
-                    this.livroRowDeleted(this, new livroRowChangeEvent(((livroRow)(e.Row)), e.Action));
+                if ((this.livrosRowDeleted != null)) {
+                    this.livrosRowDeleted(this, new livrosRowChangeEvent(((livrosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -488,14 +488,14 @@ namespace CadastroLivrosXaml {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.livroRowDeleting != null)) {
-                    this.livroRowDeleting(this, new livroRowChangeEvent(((livroRow)(e.Row)), e.Action));
+                if ((this.livrosRowDeleting != null)) {
+                    this.livrosRowDeleting(this, new livrosRowChangeEvent(((livrosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovelivroRow(livroRow row) {
+            public void RemovelivrosRow(livrosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -522,7 +522,7 @@ namespace CadastroLivrosXaml {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "livroDataTable";
+                attribute2.FixedValue = "livrosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -566,41 +566,25 @@ namespace CadastroLivrosXaml {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class livroRow : global::System.Data.DataRow {
+        public partial class livrosRow : global::System.Data.DataRow {
             
-            private livroDataTable tablelivro;
+            private livrosDataTable tablelivros;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal livroRow(global::System.Data.DataRowBuilder rb) : 
+            internal livrosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablelivro = ((livroDataTable)(this.Table));
+                this.tablelivros = ((livrosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int cod_livro {
+            public int id_livro {
                 get {
-                    return ((int)(this[this.tablelivro.cod_livroColumn]));
+                    return ((int)(this[this.tablelivros.id_livroColumn]));
                 }
                 set {
-                    this[this.tablelivro.cod_livroColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string autor {
-                get {
-                    try {
-                        return ((string)(this[this.tablelivro.autorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'autor\' na tabela \'livro\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablelivro.autorColumn] = value;
+                    this[this.tablelivros.id_livroColumn] = value;
                 }
             }
             
@@ -609,39 +593,55 @@ namespace CadastroLivrosXaml {
             public string nome {
                 get {
                     try {
-                        return ((string)(this[this.tablelivro.nomeColumn]));
+                        return ((string)(this[this.tablelivros.nomeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'nome\' na tabela \'livro\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'nome\' na tabela \'livros\' é DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablelivro.nomeColumn] = value;
+                    this[this.tablelivros.nomeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsautorNull() {
-                return this.IsNull(this.tablelivro.autorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetautorNull() {
-                this[this.tablelivro.autorColumn] = global::System.Convert.DBNull;
+            public string autor {
+                get {
+                    try {
+                        return ((string)(this[this.tablelivros.autorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'autor\' na tabela \'livros\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablelivros.autorColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsnomeNull() {
-                return this.IsNull(this.tablelivro.nomeColumn);
+                return this.IsNull(this.tablelivros.nomeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetnomeNull() {
-                this[this.tablelivro.nomeColumn] = global::System.Convert.DBNull;
+                this[this.tablelivros.nomeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsautorNull() {
+                return this.IsNull(this.tablelivros.autorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetautorNull() {
+                this[this.tablelivros.autorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -649,22 +649,22 @@ namespace CadastroLivrosXaml {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class livroRowChangeEvent : global::System.EventArgs {
+        public class livrosRowChangeEvent : global::System.EventArgs {
             
-            private livroRow eventRow;
+            private livrosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRowChangeEvent(livroRow row, global::System.Data.DataRowAction action) {
+            public livrosRowChangeEvent(livrosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public livroRow Row {
+            public livrosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -692,7 +692,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class livroTableAdapter : global::System.ComponentModel.Component {
+    public partial class livrosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -706,7 +706,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public livroTableAdapter() {
+        public livrosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -803,47 +803,47 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "livro";
-            tableMapping.ColumnMappings.Add("cod_livro", "cod_livro");
-            tableMapping.ColumnMappings.Add("autor", "autor");
+            tableMapping.DataSetTable = "livros";
+            tableMapping.ColumnMappings.Add("id_livro", "id_livro");
             tableMapping.ColumnMappings.Add("nome", "nome");
+            tableMapping.ColumnMappings.Add("autor", "autor");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `livro` WHERE ((`cod_livro` = ?) AND ((? = 1 AND `autor` IS NULL) OR " +
-                "(`autor` = ?)) AND ((? = 1 AND `nome` IS NULL) OR (`nome` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `livros` WHERE ((`id_livro` = ?) AND ((? = 1 AND `nome` IS NULL) OR (" +
+                "`nome` = ?)) AND ((? = 1 AND `autor` IS NULL) OR (`autor` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cod_livro", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_livro", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_autor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id_livro", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_livro", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nome", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nome", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_autor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `livro` (`autor`, `nome`) VALUES (?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `livros` (`nome`, `autor`) VALUES (?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nome", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `livro` SET `autor` = ?, `nome` = ? WHERE ((`cod_livro` = ?) AND ((? = 1 A" +
-                "ND `autor` IS NULL) OR (`autor` = ?)) AND ((? = 1 AND `nome` IS NULL) OR (`nome`" +
+            this._adapter.UpdateCommand.CommandText = "UPDATE `livros` SET `nome` = ?, `autor` = ? WHERE ((`id_livro` = ?) AND ((? = 1 A" +
+                "ND `nome` IS NULL) OR (`nome` = ?)) AND ((? = 1 AND `autor` IS NULL) OR (`autor`" +
                 " = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("nome", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cod_livro", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cod_livro", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_autor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_id_livro", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "id_livro", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_nome", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_nome", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "nome", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_autor", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_autor", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "autor", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::CadastroLivrosXaml.Properties.Settings.Default.bancoConnectionString;
+            this._connection.ConnectionString = global::CadastroLivrosXaml.Properties.Settings.Default.dadosConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -852,7 +852,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT cod_livro, autor, nome FROM livro";
+            this._commandCollection[0].CommandText = "SELECT id_livro, nome, autor FROM livros";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -860,7 +860,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(dados.livroDataTable dataTable) {
+        public virtual int Fill(dados.livrosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -873,9 +873,9 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual dados.livroDataTable GetData() {
+        public virtual dados.livrosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            dados.livroDataTable dataTable = new dados.livroDataTable();
+            dados.livrosDataTable dataTable = new dados.livrosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -883,7 +883,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(dados.livroDataTable dataTable) {
+        public virtual int Update(dados.livrosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -891,7 +891,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(dados dataSet) {
-            return this.Adapter.Update(dataSet, "livro");
+            return this.Adapter.Update(dataSet, "livros");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -913,23 +913,23 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_cod_livro, string Original_autor, string Original_nome) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_cod_livro));
-            if ((Original_autor == null)) {
+        public virtual int Delete(int Original_id_livro, string Original_nome, string Original_autor) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_livro));
+            if ((Original_nome == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_autor));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_nome));
             }
-            if ((Original_nome == null)) {
+            if ((Original_autor == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_nome));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_autor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -951,18 +951,18 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string autor, string nome) {
-            if ((autor == null)) {
+        public virtual int Insert(string nome, string autor) {
+            if ((nome == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(autor));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(nome));
             }
-            if ((nome == null)) {
+            if ((autor == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(nome));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(autor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -984,35 +984,35 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string autor, string nome, int Original_cod_livro, string Original_autor, string Original_nome) {
-            if ((autor == null)) {
+        public virtual int Update(string nome, string autor, int Original_id_livro, string Original_nome, string Original_autor) {
+            if ((nome == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(autor));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(nome));
             }
-            if ((nome == null)) {
+            if ((autor == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(nome));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(autor));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_cod_livro));
-            if ((Original_autor == null)) {
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_id_livro));
+            if ((Original_nome == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_autor));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_nome));
             }
-            if ((Original_nome == null)) {
+            if ((Original_autor == null)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_nome));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_autor));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1043,7 +1043,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private livroTableAdapter _livroTableAdapter;
+        private livrosTableAdapter _livrosTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1065,12 +1065,12 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public livroTableAdapter livroTableAdapter {
+        public livrosTableAdapter livrosTableAdapter {
             get {
-                return this._livroTableAdapter;
+                return this._livrosTableAdapter;
             }
             set {
-                this._livroTableAdapter = value;
+                this._livrosTableAdapter = value;
             }
         }
         
@@ -1093,9 +1093,9 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._livroTableAdapter != null) 
-                            && (this._livroTableAdapter.Connection != null))) {
-                    return this._livroTableAdapter.Connection;
+                if (((this._livrosTableAdapter != null) 
+                            && (this._livrosTableAdapter.Connection != null))) {
+                    return this._livrosTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1110,7 +1110,7 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._livroTableAdapter != null)) {
+                if ((this._livrosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1124,12 +1124,12 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(dados dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._livroTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.livro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._livrosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.livros.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._livroTableAdapter.Update(updatedRows));
+                    result = (result + this._livrosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1143,11 +1143,11 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(dados dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._livroTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.livro.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._livrosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.livros.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._livroTableAdapter.Update(addedRows));
+                    result = (result + this._livrosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1161,11 +1161,11 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(dados dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._livroTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.livro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._livrosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.livros.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._livroTableAdapter.Update(deletedRows));
+                    result = (result + this._livrosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1208,8 +1208,8 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._livroTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._livroTableAdapter.Connection) == false))) {
+            if (((this._livrosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._livrosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
@@ -1245,13 +1245,13 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._livroTableAdapter != null)) {
-                    revertConnections.Add(this._livroTableAdapter, this._livroTableAdapter.Connection);
-                    this._livroTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._livroTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._livroTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._livroTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._livroTableAdapter.Adapter);
+                if ((this._livrosTableAdapter != null)) {
+                    revertConnections.Add(this._livrosTableAdapter, this._livrosTableAdapter.Connection);
+                    this._livrosTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._livrosTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._livrosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._livrosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._livrosTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1312,9 +1312,9 @@ namespace CadastroLivrosXaml.dadosTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._livroTableAdapter != null)) {
-                    this._livroTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._livroTableAdapter]));
-                    this._livroTableAdapter.Transaction = null;
+                if ((this._livrosTableAdapter != null)) {
+                    this._livrosTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._livrosTableAdapter]));
+                    this._livrosTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

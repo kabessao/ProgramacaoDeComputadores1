@@ -30,11 +30,13 @@ namespace TesteXaml
             timer.Tick += Timer_Tick;
         }
 
-        private void Timer_Tick(object sender, EventArgs e)
+        private async void Timer_Tick(object sender, EventArgs e)
         {
-            txbnumero.Text = $"{new Random().Next(1,100)}";
-            if (vezes == 0) txbPrimeiro.Text = txbnumero.Text;
-            if (txbnumero.Text == txbPrimeiro.Text && vezes > 3) txbPrimeiro.Foreground = new SolidColorBrush(Colors.Red);
+            txbPrimeiro.Text = $"{new Random(Environment.TickCount * -1).Next(1,100)}";
+            await Task.Delay(1000);
+            txbSegundo.Text = $"{new Random(Environment.TickCount * -1).Next(1,100)}";
+            txbUpTime.Text = $"{Environment.TickCount}";
+            if (txbSegundo.Text == txbPrimeiro.Text && vezes > 3) txbPrimeiro.Foreground = new SolidColorBrush(Colors.Red);
             vezes++;
             if (vezes > 100)
             {
@@ -43,7 +45,6 @@ namespace TesteXaml
             }
 
         }
-
 
         private void Start(object sender, RoutedEventArgs e)
         {

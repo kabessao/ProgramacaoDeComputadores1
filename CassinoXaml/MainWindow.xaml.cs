@@ -25,42 +25,30 @@ namespace CassinoXaml
 
         DispatcherTimer timer = new DispatcherTimer();
         
-        int i = 0, j = 0, k = 0;
         public MainWindow()
         {
             InitializeComponent();
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 50);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 15);
             timer.Tick += (s, e) => Teste();
         }
 
-        private void Teste()
+        private async void Teste()
         {
-            if (i < 20)
-            {
-                i++;
-                txbNum1.Text = $"{new Random(System.Environment.TickCount).Next(0, 7)}";
-            }
-            if (j < 50)
-            {
-                j++;
-                txbNum2.Text= $"{new Random(System.Environment.TickCount).Next(0, 7)}";
-            }
-            if (k < 100)
-            {
-                k++;
-                txbNum3.Text = $"{new Random(System.Environment.TickCount).Next(0, 7)}";
-            }
-            if (k == 100) timer.Stop();
+            int count = 0;
+            txbNum1.Text = $"{new Random(System.Environment.TickCount * -1).Next(0, 7)}";
+            await Task.Delay(1000);
+            txbNum2.Text= $"{new Random(System.Environment.TickCount * -1).Next(0, 7)}";
+            await Task.Delay(1000);
+            txbNum3.Text = $"{new Random(System.Environment.TickCount * -1).Next(0, 7)}";
+            await Task.Delay(1000);
+            txbNum4.Text = $"{new Random(System.Environment.TickCount * -1).Next(0, 7)}";
+            if (count < 100) timer.Stop(); 
         }
 
-        private void Window_KeyDown(object sender, KeyEventArgs e)
-        {
-            Apostar(null, null);
-        }
+        private void Window_KeyDown(object sender, KeyEventArgs e) => Apostar(null, null);
 
         private void Apostar(object sender, RoutedEventArgs e)
         {
-            i = 0;j = 0;k = 0;
             timer.Start();
         }
 

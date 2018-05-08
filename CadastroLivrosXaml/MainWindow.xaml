@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CadastroLivrosXaml"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,12 +21,28 @@
             <Button Content="Gravar"
                     Click="Gravar"/>
         </StackPanel>
-        <StackPanel Grid.Column="1">
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <Button Content="Listar"
                     Margin="5"
                     Click="Listar"/>
-            <StackPanel VerticalAlignment="center"
-                        x:Name="Painel"/>
-        </StackPanel>
+            <ListView Grid.Row="1"
+                      x:Name="lstLista"
+                      MouseDoubleClick="lstLista_MouseDoubleClick">
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Id"
+                                        DisplayMemberBinding="{Binding Id}" />
+                        <GridViewColumn Header="Nome"
+                                        DisplayMemberBinding="{Binding Nome}"/>
+                        <GridViewColumn Header="Autor"
+                                        DisplayMemberBinding="{Binding Autor}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>
