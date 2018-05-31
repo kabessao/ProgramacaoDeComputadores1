@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CadastroLivrosXaml
+namespace ZooXaml
 {
     /// <summary>
-    /// Interação lógica para Cadastro.xam
+    /// Interação lógica para MainWindow.xam
     /// </summary>
-    public partial class Cadastro : UserControl
+    public partial class MainWindow : Window
     {
-        public Cadastro()
+        public MainWindow()
         {
             InitializeComponent();
         }
