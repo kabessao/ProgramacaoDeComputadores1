@@ -93,7 +93,6 @@ namespace ZooXaml.DAO
 
             while (reader.Read())
             {
-                reader.get
             }
             return list;
 
