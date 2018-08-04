@@ -27,10 +27,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteXaml", "TesteXaml\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZooXaml", "ZooXaml\ZooXaml.csproj", "{14CFF621-2432-4306-85D1-4CCD815006D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseAccess", "DataBaseAccess\DataBaseAccess.csproj", "{1978A649-F96B-4772-8AF8-87ECF66EA56E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseAccessTest", "DataBaseAccessTest\DataBaseAccessTest.csproj", "{946413F3-D91F-4E05-9301-B927823DDCA8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,14 +81,6 @@ Global
 		{14CFF621-2432-4306-85D1-4CCD815006D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14CFF621-2432-4306-85D1-4CCD815006D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14CFF621-2432-4306-85D1-4CCD815006D3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1978A649-F96B-4772-8AF8-87ECF66EA56E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1978A649-F96B-4772-8AF8-87ECF66EA56E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1978A649-F96B-4772-8AF8-87ECF66EA56E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1978A649-F96B-4772-8AF8-87ECF66EA56E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{946413F3-D91F-4E05-9301-B927823DDCA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{946413F3-D91F-4E05-9301-B927823DDCA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{946413F3-D91F-4E05-9301-B927823DDCA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{946413F3-D91F-4E05-9301-B927823DDCA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
